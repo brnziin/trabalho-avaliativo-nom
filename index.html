@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket League - Painel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="tela-principal">
+            <h1>Bem-vindo, <span id="display-nome">Jogador</span>!</h1>
+        </div>
+        <nav>
+            <button class="navegar-btn" clicar="jogar">Jogar</button>
+            <button class="navegar-btn" clicar="ver-loja">Loja</button>
+            <button class="navegar-btn" clicar="ver-garagem">Garagem</button>
+            <button id="escuro" class="btn-extra">Modo Escuro (Toggle)</button>
+        </nav>
+        <div class="creditos">Créditos: <span id="creditos">1500</span> 💎</div>
+    </header>
+
+    <main>
+        <section id="jogar" class="ver active">
+            <h2>Escolha seu Modo de Jogo</h2>
+            <img id="carrro-jogador" src="mcqueen.png" alt="Arena">
+            <div class="modos">
+                <button class="modo-btn">Partida 3v3</button>
+                <button class="modo-btn">Partida 2v2</button>
+                <button class="modo-btn">Torneio Diário</button>
+            </div>
+            <button id="btn-buscar">Procurar Partida</button>
+            <div id="fila-tempo" class="hidden">Tempo na fila: <span id="cronometro">0</span>s</div>
+        </section>
+
+        <section id="ver-loja" class="ver hidden">
+            <h2>Loja de Itens Diária</h2>
+            <div id="mensagem-compra" class="hidden">Item comprado com sucesso!</div>
+            <div class="loja">
+                <div class="loja-item" data-price="500">
+                    <img src="fennec.png" alt="Fennec">
+                    <p>Fennec (500 CR)</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+                <div class="loja-item" data-price="2000">
+                    <img src="dragons.png" alt="Dragons">
+                    <p>Explosão Dueling Dragons (2000 CR)</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ver-garagem" class="ver hidden">
+            <h2>Sua Garagem</h2>
+            <img id="carro-garagem" src="mcqueen.png" alt="Carro na Garagem">
+
+            <h3>Selecionar Carro</h3>
+            <div class="customizar">
+                <img class="item-garagem" src="gt3.png" data-img="gt3.png">
+                <img class="item-garagem" src="octane.png" data-img="octane.png">
+                <img class="item-garagem" src="dominus.png" data-img="dominus.png">
+            </div>
+
+            <div class="config-painel">
+                <h3>Configurações de Conta</h3>
+                <label>Sua Gamertag (Muda o topo):</label><br>
+                <input type="text" id="input-name" placeholder="Digite seu nome...">
+                <br><br>
+                <label>Senha do Torneio Privado:</label><br>
+                <input type="password" id="input-senha" placeholder="Sua senha secreta...">
+                <button id="btn-mostrar-senha" class="btn-extra">Mostrar Senha</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
